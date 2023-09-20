@@ -1,5 +1,6 @@
 package com.example.simplecodesnippets
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -94,7 +95,38 @@ class MainActivity : AppCompatActivity() {
         */
 
         // snippet for ImageButton
+        /**
+        val imageButton: ImageButton = findViewById(R.id.imageButton)
+        imageButton.setOnClickListener{
+            val toast = Toast.makeText(this, "Clicked", Toast.LENGTH_SHORT)
+            toast.show()
+        }
+        */
 
+        // snippet for RadioButton
 
+        val linearLayout: LinearLayout = findViewById(R.id.linearLayout)
+        val radioGroup: RadioGroup = findViewById(R.id.radioGroup)
+
+        /**
+        radioGroup.setOnCheckedChangeListener(object : RadioGroup.OnCheckedChangeListener {
+            override fun onCheckedChanged(group: RadioGroup?, checkedId: Int) {
+                when(checkedId){
+                    R.id.radioButton1 -> linearLayout.setBackgroundColor(Color.RED)
+                    R.id.radioButton2 -> linearLayout.setBackgroundColor(Color.BLUE)
+                    R.id.radioButton3 -> linearLayout.setBackgroundColor(Color.GREEN)
+                }
+            }
+        })
+        */
+
+        // below code is same as above
+        radioGroup.setOnCheckedChangeListener{group, checkedId ->
+            when(checkedId){
+                R.id.radioButton1 -> linearLayout.setBackgroundColor(Color.RED)
+                R.id.radioButton2 -> linearLayout.setBackgroundColor(Color.BLUE)
+                R.id.radioButton3 -> linearLayout.setBackgroundColor(Color.GREEN)
+            }
+        }
     }
 }
