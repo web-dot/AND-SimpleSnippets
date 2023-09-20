@@ -3,13 +3,14 @@ package com.example.simplecodesnippets
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.core.widget.addTextChangedListener
+import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
+
+    val inputs = listOf<String>("India", "Iran", "Turkey", "Australia", "Britain", "France", "Greece", "Thailand", "America", "Bhutan")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -64,6 +65,36 @@ class MainActivity : AppCompatActivity() {
             toast.show()
         }
         */
+
+        // snippet 4 (Button)
+        /**
+        val textViewForButton: TextView = findViewById(R.id.textView)
+        val button1: Button = findViewById(R.id.button_1)
+        val button2: Button = findViewById(R.id.button_2)
+
+        button1.setOnClickListener{
+            textViewForButton.setText("Hello Everyone")
+        }
+
+        button2.setOnClickListener{
+            val toast = Toast.makeText(this, "Hello from Android", Toast.LENGTH_SHORT)
+            toast.show()
+        }
+        */
+
+
+        // snippet for AutoCompleteTextView
+        /**
+        val textView: TextView = findViewById(R.id.textView)
+        val autoCompleteTextView: AutoCompleteTextView = findViewById(R.id.autoCompleteTextView)
+
+        textView.setText("Text inputs: \nIndia, Iran, Turkey, Australia, Britain, France, Greece, Thailand, America, Bhutan")
+        val adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, inputs)
+        autoCompleteTextView.setAdapter(adapter)
+        */
+
+        // snippet for ImageButton
+
 
     }
 }

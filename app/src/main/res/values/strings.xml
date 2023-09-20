@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SimpleCodeSnippets</string>
+    <string name="click_me">Click me</string>
+    <string name="toast">Toast</string>
 </resources>
